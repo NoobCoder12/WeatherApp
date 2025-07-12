@@ -1,0 +1,114 @@
+body {
+  background-color: #ffffff;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #2b6777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  margin-top: 010rem;
+  text-align: center;
+
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #c8d8e4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #2b6777;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #52ab98;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2b6777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: max-content;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2b6777;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 5rem;
+}
+
+input {
+  display: block;
+  width: max-content;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2b6777;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button {
+  display: block;
+  width: max-content;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2b6777;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+small.form-text,
+small.helptext,
+ul,
+small {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2b6777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}

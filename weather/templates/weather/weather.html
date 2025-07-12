@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Weather
+{% endblock %}
+
+
+    
+{% block body %}
+    <h1>Weather</h1>
+    <p>You can check weather. Type down city.</p>
+    <form method='POST' >
+        {% csrf_token %}
+        <label for='City'>City</label>
+        <br>
+        <input type='text' id='city' name='city' required>
+        <br>
+        <button type='submit'>Check the weather</button>
+
+{% endblock %}
+    
