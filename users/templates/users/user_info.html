@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Account info
+{% endblock %}
+    
+{% block body %}
+    <h1>Account info</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>E-mail: {{ user.email }}</p>
+    <p>City: {{ user.city }}</p>
+
+{% endblock %}
+    

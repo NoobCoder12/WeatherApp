@@ -1,18 +1,24 @@
 from django.shortcuts import render, redirect, reverse
 import requests
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 def form(request):
     if request.method == 'POST':
         city = request.POST.get('city')
-        url = reverse("weather:forecast", kwargs={'city': city})
+        url = reverse("weather:forecast") + f'?city={city}'
         return redirect(url)
     return render(request, 'weather/weather.html')
 
 
-def forecast(request, city):
+@login_required
+def forecast(request):
     key = '1fd4d0789e224120ad1190754250807'
+    city = request.GET.get('city') or getattr(request.user, 'city', None)
+
+    if not city:
+        return redirect('weather:form')
 
     params = {
         'key': key,

@@ -13,6 +13,11 @@ Weather for {{ weather.city }}
         <p>Wind speed: {{ weather.wind_kph }} km/h</p>
         <p>Humidity: {{ weather.humidity }}</p>
         <p>Condition: {{ weather.condition }}</p>
+        <br>
+        </a>
+        <a href="{% url 'weather:form' %}">
+            <p role='text' aria-label='Weather' title='Weather'>Check the weather for other city</p>
+        </a>
 
 {% endblock %}
     

@@ -28,6 +28,9 @@
         <a href='/weather'>
             <span role='text' aria-label='Weather' title='Weather'>Weather</span>
         </a>
+        <a href="{% url 'users:info' %}">
+            <span role='text' aria-label='Account' title='Account'>User Info</span>
+        </a>
         <a href="{% url 'users:logout' %}">
             <span role='text' aria-label='Logout' title='Logout'>Logout</span>
         </a>

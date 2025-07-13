@@ -9,7 +9,12 @@ Login
     <form method='POST'>
         {% csrf_token %}
         {{ form }}
+
+        <input type='hidden' name='next' value="{{ next }}">
+
         <button type='Submit'>Login</button>
+
+
     </form>
 {% endblock %}
     
