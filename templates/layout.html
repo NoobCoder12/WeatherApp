@@ -21,24 +21,42 @@
         <a href='/about'>
             <span role='text' aria-label='About' title='About'>About</span>
         </a>
-        <a href='/'>
-            <span role='text' aria-label='Gallery' title='Gallery'>Gallery</span>
-        </a>
+        
         {% if user.is_authenticated %}
-        <a href='/weather'>
-            <span role='text' aria-label='Weather' title='Weather'>Weather</span>
-        </a>
-        <a href="{% url 'users:info' %}">
-            <span role='text' aria-label='Account' title='Account'>User Info</span>
-        </a>
-        <a href="{% url 'users:logout' %}">
-            <span role='text' aria-label='Logout' title='Logout'>Logout</span>
-        </a>
+
+        <div class='dropdown'>
+            <span class='droptitle' role='text' aria-label='Diary' title='Diary'>Diary</span>
+            <div class='dropcontent'>
+                <a href="{% url 'diary:create' %}">New thought</a>
+                <a href=''>My thoughts</a>
+            </div>
+        </div>
+
+        <div class='dropdown-weather'>
+            <span class='droptitle-weather' role='text' aria-label='Weather' title='Weather'>Weather</span>
+            <div class='dropcontent-weather'>
+                <a href="/weather">My city</a>
+                <a href="{% url 'weather:form' %}">Other city</a>
+            </div>
+        </div>
+    
+
+        <div class='dropdown-users-logged'>
+            <span class='droptitle-users-logged' role='text' aria-label='Users' title='Users'>Hi, {{ user.username }}!</span>
+            <div class='dropcontent-users-logged'>
+                <a href="{% url 'users:info' %}">My account</a>
+                <a href="{% url 'users:logout' %}">Logout</a>
+            </div>
+        </div>
         {% else %}
 
-        <a href='/users'>
-            <span role='text' aria-label='Users' title='Users'>Users</span>
-        </a>
+        <div class='dropdown-users'>
+            <span class='droptitle-users' role='text' aria-label='Users' title='Users'>Users</span>
+            <div class='dropcontent-users'>
+                <a href="{% url 'users:login' %}">Login</a>
+                <a href="{% url 'users:register' %}">Register</a>
+            </div>
+        </div>
 
         {% endif %}
     </nav>

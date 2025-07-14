@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse
 import requests
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+import os
 
 
 def form(request):
@@ -14,7 +15,10 @@ def form(request):
 
 @login_required
 def forecast(request):
-    key = '1fd4d0789e224120ad1190754250807'
+    key = os.getenv('WEATHER_API_KEY')
+
+    if not key:
+        return HttpResponse('No API Key. Configure .env file according to instruction.', status=500)
     city = request.GET.get('city') or getattr(request.user, 'city', None)
 
     if not city:
@@ -44,7 +48,7 @@ def forecast(request):
         return render(request, 'weather/forecast.html', {'weather': context})
 
     except requests.RequestException as e:
-        return HttpResponse(f'Error fetching weather data" {e}', status=500)
+        return HttpResponse(f'Error fetching weather data: {e}', status=500)
 
     except KeyError:
         return HttpResponse('Unexpected response format from weather API', status=500)

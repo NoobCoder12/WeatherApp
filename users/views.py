@@ -6,9 +6,6 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 
 
-def choose_action(request):
-    return render(request, "users/choose.html")
-
 
 def register(request):
     if request.method == 'POST':

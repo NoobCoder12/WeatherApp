@@ -10,7 +10,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  margin-top: 010rem;
+  margin-top: 10rem;
   text-align: center;
 
 }
@@ -111,4 +111,69 @@ small {
 
 li {
   list-style: none;
+}
+
+.dropdown:hover .dropcontent,
+.dropdown-users:hover .dropcontent-users,
+.dropdown-users-logged:hover .dropcontent-users-logged,
+.dropdown-weather:hover .dropcontent-weather {
+  display: block;
+}
+
+.dropdown,
+.dropdown-users,
+.dropdown-users-logged,
+.dropdown-weather {
+  position: relative;
+  display: inline-block;
+}
+
+.droptitle,
+.droptitle-users,
+.droptitle-users-logged,
+.droptitle-weather {
+  cursor: pointer;
+  padding: 10px;
+  display: inline-block;
+  color: #2b6777;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.dropcontent,
+.dropcontent-users,
+.dropcontent-users-logged,
+.dropcontent-weather {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropcontent a,
+.dropcontent-users a,
+.dropcontent-users-logged a,
+.dropcontent-weather a {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+}
+
+.dropcontent a:hover,
+.dropcontent-users a:hover,
+.dropcontent-users-logged a:hover,
+.dropcontent-weather a:hover {
+  background-color: #f1f1f1;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  font-size: 16px;
 }
