@@ -30,7 +30,7 @@ Weather data is fetched from an external API (e.g., OpenWeatherMap). Thoughts ar
 
 ## ⚙️ Setup Instructions
 
-1. Create a virtual environment
+1. Clone the repository and navigate into it
 
 ```bash
 git clone https://github.com/NoobCoder12/django-portal
