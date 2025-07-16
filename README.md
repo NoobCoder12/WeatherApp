@@ -33,8 +33,8 @@ Weather data is fetched from an external API (e.g., OpenWeatherMap). Thoughts ar
 1. Create a virtual environment
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/NoobCoder12/django-portal
+cd django-portal
 
 2. Create a virtual environment
 
@@ -50,6 +50,8 @@ pip install -r requirements.txt
 Create a .env file in the root directory with the following content:
 
 WEATHER_API_KEY=your_api_key_here
+
+Replace your_api_key_here with your actual API key from OpenWeatherMap.
 
 5. Apply migrations and run the server
 
@@ -70,6 +72,12 @@ Thoughts/posts are handled with Django forms and displayed in the app.
 
 Media file uploads (like banners for posts) require configuration in settings.py.
 
+To enable media uploads (e.g. banners for posts), ensure you have MEDIA_URL and MEDIA_ROOT configured in settings.py, and add urlpatterns in urls.py during development:
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
