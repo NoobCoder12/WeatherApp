@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
+{% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'weather/style.css' %}">
+{% endblock %}
 
 {% block title %}
 Weather
@@ -10,11 +14,11 @@ Weather
 {% block body %}
     <h1>Weather</h1>
     <p>You can check the weather here</p>
-    <form method='POST' >
+    <form method='POST'>
         {% csrf_token %}
-        <label for='City'>City</label>
+        <label for='city' class="weather-label">City</label>
         <br>
-        <input type='text' id='city' name='city' required>
+        <input class="weather-input"t ype='text' id='city' name='city' required>
         <br>
         <button type='submit'>Check the weather</button>
 

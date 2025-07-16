@@ -1,12 +1,16 @@
 {% extends "layout.html" %}
+{% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'users/style.css' %}">
+{% endblock %}
 
 {% block title %}
 Register
 {% endblock %}
     
 {% block body %}
-    <form method='POST'>
+    <form method='POST' class="register-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type='Submit'>Register</button>

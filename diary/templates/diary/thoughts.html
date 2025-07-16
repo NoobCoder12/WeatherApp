@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'diary/style.css' %}">
+{% endblock  %}
+
+
+{% block title %}
+My Thoughts
+{% endblock %}
+    
+{% block body %}
+    {% for thought in thoughts %}
+        <h2><a href="{% url 'diary:view_thought' thought.slug %}" class="post-title">{{ thought.title }}</a></h2>
+        <p>{{ thought.date }}</p>
+    {% empty %}
+        <p class='empty'>No thoughts yet.</p>
+    {% endfor %}
+{% endblock %}
+    

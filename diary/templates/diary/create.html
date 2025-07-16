@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'diary/style.css' %}">
+{% endblock  %}
 
 
 {% block title %}
@@ -6,14 +11,10 @@ New Thought
 {% endblock %}
     
 {% block body %}
-    <form method='POST'>
+    <form method='POST' enctype="multipart/form-data" class="form_post">
         {% csrf_token %}
         {{ form.as_p }}
-
-
         <button type='Submit'>Create</button>
-
-
     </form>
 {% endblock %}
     

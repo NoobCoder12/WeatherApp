@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'diary/style.css' %}">
+{% endblock  %}
+
+
+{% block title %}
+My Thoughts
+{% endblock %}
+    
+{% block body %}
+    <h1>{{ thought.title }}</h1>
+    <p>{{ thought.date }}</p>
+    {% if thought.banner %}
+        <img src="{{ thought.banner.url }}" alt="{{ thought.title }}" class="post-image">
+    {% endif %}
+    <p>{{ thought.body }}</p>
+{% endblock %}
+    

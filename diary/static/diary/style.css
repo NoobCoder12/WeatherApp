@@ -1,0 +1,97 @@
+textarea {
+  width: 800px;
+  height: 150px;
+  font-size: 16px;
+}
+
+#id_title {
+  width: 800px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+#id_slug {
+  width: 400px;
+  height: 20px;
+  font-size: 15px;
+}
+
+#id_banner {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+label {
+  display: block;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #2b6777;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.form_post {
+  margin-top: 10rem;
+}
+
+.empty {
+  margin-top: 20rem;
+}
+
+button {
+  display: block;
+  margin: 1rem auto 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #2b6777;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form_post label {
+  display: block;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #2b6777;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.post-title {
+  display: block;
+  margin: 0 auto 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #2b6777;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.post-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 90%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

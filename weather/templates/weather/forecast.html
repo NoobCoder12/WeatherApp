@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
+{% load static %}
 
+{% block head%}
+<link rel='stylesheet' href="{% static 'weather/style.css' %}">
+{% endblock %}
 
 {% block title %}
 Weather for {{ weather.city }}
@@ -13,10 +17,11 @@ Weather for {{ weather.city }}
         <p>Wind speed: {{ weather.wind_kph }} km/h</p>
         <p>Humidity: {{ weather.humidity }}</p>
         <p>Condition: {{ weather.condition }}</p>
+        <p>Last updated: {{weather.last_updated}}</p>
         <br>
         </a>
         <a href="{% url 'weather:form' %}">
-            <p role='text' aria-label='Weather' title='Weather'>Check the weather for other city</p>
+            <p class="weather-check" role='text' aria-label='Weather' title='Weather'>Check the weather for other city</p>
         </a>
 
 {% endblock %}

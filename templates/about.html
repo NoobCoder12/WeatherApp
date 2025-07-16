@@ -7,7 +7,47 @@ About
     
 {% block body %}
     <h1>About</h1>
-    <p>This is my about page. You can put some text here</p>
+    <p>This web application was built using Django and showcases several core backend features, along with a clean and intuitive user interface. It is intended as a demonstration of my practical skills in building full-stack web apps with Python and Django.</p>
 
+    <h2>Key Features & How to Use:</h2>
+    <ul>
+        <li>
+            <strong>User Management</strong>
+            <p>Visitors can register a new account or log in with existing credentials. After logging in, users gain access to protected parts of the site such as the weather page or personal thoughts.</p>
+        </li>
+        <li>
+            <strong>Posts (My Thoughts)</strong>
+            <p>Authenticated users can create and view personal posts – these can be simple reflections, notes, or diary entries. Each post includes a title, content body, optional banner image, and is automatically timestamped.</p>
+        </li>
+        <li>
+            <strong>Weather Page</strong>
+            <p>Users can search for current weather conditions automatically for their city or different by entering a city name. The app fetches real-time data and displays basic weather information.</p>
+        </li>
+        <li>
+            <strong>Navigation & Layout</strong>
+            <p>The app features a consistent navigation bar with dropdown menus for grouped links (e.g., under "Users" or "Posts"). Layout and styling are handled with custom CSS for clarity and usability.</p>
+        </li>
+    </ul>
+    
+    <h2>Technical Overview</h2>
+    <ul class="dotted">
+        <li>Django class-based and function-based views</li>
+        <li>Dynamic forms with model integration</li>
+        <li>Custom user model support</li>
+        <li>URL routing, templates, and static file handling</li>
+        <li>CSRF protection, form validation, user sessions</li>
+    </ul>
+
+    <h2>Weather Setup</h2>
+    <p>To enable weather data functionality, you will need an API key from <a href="https://openweathermap.org/api" target="_blank" class="diff-link">OpenWeather</a>. Follow these steps:</p>
+    <ol>
+        <li>Create an account at <a href="https://openweathermap.org/" target="_blank" class="diff-link">openweathermap.org</a>.</li>
+        <li>Navigate to the API section and generate your free API key.</li>
+        <li>Create a <code>.env</code> file in your Django project root (if it doesn't exist).</li>
+        <li>Add the following line to your <code>.env</code> file:<br>
+            <code>WEATHER_API_KEY=your_api_key_here</code></li>
+        <li>Make sure your Django app loads environment variables securely.</li>
+    </ol>  
+    
 {% endblock %}
     

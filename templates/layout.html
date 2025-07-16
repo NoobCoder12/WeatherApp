@@ -11,6 +11,10 @@
     </title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block head %}
+    
+    {% endblock %}
     
 </head>
 <body>
@@ -28,7 +32,7 @@
             <span class='droptitle' role='text' aria-label='Diary' title='Diary'>Diary</span>
             <div class='dropcontent'>
                 <a href="{% url 'diary:create' %}">New thought</a>
-                <a href=''>My thoughts</a>
+                <a href="{% url 'diary:thoughts' %}">My thoughts</a>
             </div>
         </div>
 
