@@ -3,7 +3,11 @@ services:
     name: weatherapp
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python manage.py migrate && python manage.py collectstatic --noinput && gunicorn WeatherApp.wsgi:application
+    startCommand: |
+      python manage.py showmigrations
+      python manage.py migrate --verbosity 3
+      python manage.py collectstatic --noinput
+      gunicorn WeatherApp.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: WeatherApp.settings
