@@ -1,4 +1,4 @@
-🌤️ Django Weather & Thoughts App
+# 🌤️ Django Weather & Thoughts App
 
 A simple Django web application that allows users to:
 
@@ -8,7 +8,7 @@ A simple Django web application that allows users to:
 
 Weather data is fetched from an external API (weatherapi.com). Thoughts are stored locally using Django models.
 
-🚀 Features
+# 🚀 Features
 
     🔍 Search weather by city
 
@@ -30,7 +30,7 @@ Weather data is fetched from an external API (weatherapi.com). Thoughts are stor
 
     🔑 Uses .env file for secure API key storage
 
-📦 Tech Stack
+# 📦 Tech Stack
 
     Python 3
 
@@ -42,7 +42,7 @@ Weather data is fetched from an external API (weatherapi.com). Thoughts are stor
 
     weatherapi.com API
 
-⚙️ Setup Instructions
+# ⚙️ Setup Instructions
 
     Clone the repository and navigate into it
 
@@ -78,12 +78,13 @@ python manage.py runserver
 
 Go to http://127.0.0.1:8000/ in your browser.
 
-🚀 Deployment
+
+# 🚀 Deployment
 
 The app is deployed on Render and is publicly available at:
 https://weatherapp-k1rj.onrender.com/
 
-📋 Notes
+# 📋 Notes
 
     You must create an account on weatherapi.com to obtain an API key.
 
@@ -93,10 +94,10 @@ https://weatherapp-k1rj.onrender.com/
     
     On production, the app uses PostgreSQL as the database backend.
 
-📄 License
+# 📄 License
 
 This project is licensed under the MIT License.
 
-👤 Author
+# 👤 Author
 
 Created by NoobCoder12
