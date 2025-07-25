@@ -6,30 +6,29 @@ A simple Django web application that allows users to:
 
     Add and view personal thoughts in the form of blog-style posts
 
-    Access separate REST API endpoints for thoughts, weather, and user data
+Weather data is fetched from an external API (weatherapi.com). Thoughts are stored locally using Django models.
 
-Weather data is fetched from an external API (e.g., OpenWeatherMap). Thoughts are stored locally using Django models.
 🚀 Features
 
-    🔍 Search weather by city (via web UI and API)
+    🔍 Search weather by city
 
-    🧠 Create and read personal thoughts (mini diary/blog)
+    🧠 Create and read personal thoughts (like a mini diary or blog)
 
     📍 Shows temperature, humidity, wind speed, and weather condition
 
-    🔐 API access control:
+    🔐 REST API endpoints using Django REST Framework:
 
-        api/thoughts/ — read-only for anonymous users
+        api/thoughts/ — read-only for everyone (portfolio showcase)
 
-        api/weather/ — GET only, public
+        api/weather/ — fetches weather data from external API, GET only
 
-        api/users/ — authenticated users only (view own data)
+        api/users/ — user data endpoint, accessible only to authenticated users
 
-    🧾 Responsive design with clean layout
+    🌐 Responsive design with clean layout
 
-    📌 Added favicon for better UX
+    🔖 Favicon added for site branding
 
-    🔐 Uses .env file for secure API key storage
+    🔑 Uses .env file for secure API key storage
 
 📦 Tech Stack
 
@@ -41,65 +40,63 @@ Weather data is fetched from an external API (e.g., OpenWeatherMap). Thoughts ar
 
     HTML, CSS
 
-    OpenWeatherMap API (or compatible API)
+    weatherapi.com API
 
 ⚙️ Setup Instructions
 
-    Clone the repository and navigate into it:
+    Clone the repository and navigate into it
 
 git clone https://github.com/NoobCoder12/django-portal
 cd django-portal
 
-    Create a virtual environment:
+    Create a virtual environment
 
 python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
+source env/bin/activate  # On Windows use: env\Scripts\activate
 
-    Install dependencies:
+    Install dependencies
 
 pip install -r requirements.txt
 
-    Set up environment variables:
+    Set up environment variables
 
 Create a .env file in the root directory with the following content:
 
-WEATHER_API_KEY=your_api_key_here
+WEATHER_API_KEY=your_weatherapi_key_here
 SECRET_KEY=your_django_secret_key
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
 
-Replace values with your actual keys and settings.
+Replace values accordingly. The API key is from weatherapi.com.
 
-    Apply migrations and run the development server:
+    Apply migrations and run the server
 
 python manage.py migrate
 python manage.py runserver
 
-    Open the app in your browser:
+    Open the app
 
-Go to http://127.0.0.1:8000/
-🛠️ API Endpoints
+Go to http://127.0.0.1:8000/ in your browser.
 
-    /api/thoughts/ — Read-only list of thoughts; accessible without authentication (for portfolio/demo purposes)
+🚀 Deployment
 
-    /api/weather/ — Get weather data by city (GET only; proxies external API)
+The app is deployed on Render and is publicly available at:
+https://weatherapp-k1rj.onrender.com/
 
-    /api/users/ — Authenticated users only; returns logged-in user's info
+📋 Notes
 
-📁 Notes
+    You must create an account on weatherapi.com to obtain an API key.
 
-    The favicon is added and served from static files for improved UI experience.
+    Thoughts/posts are handled with Django forms and displayed in the app.
 
-    The site is fully responsive across screen sizes.
+    Media uploads (like banners for posts) are configured in settings.py. The static/media serving in development is automatically handled based on your DEBUG setting in urls.py.
+    
+    On production, the app uses PostgreSQL as the database backend.
 
-    Environment variables must be set locally in a .env file — do not commit this file to version control.
-
-    Media uploads (e.g., images for thoughts) require proper MEDIA_URL and MEDIA_ROOT configuration in settings.py, and URL patterns for development serving.
-
-📜 License
+📄 License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+👤 Author
 
 Created by NoobCoder12
