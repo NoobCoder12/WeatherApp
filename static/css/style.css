@@ -2,6 +2,9 @@ body {
   background-color: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 h1 {
   font-family: 'Poppins', sans-serif;
@@ -272,19 +275,20 @@ code {
   }
 
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #c8d8e4;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background: #c8d8e4;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
     z-index: 1000;
+    padding-top: 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
   }
 
   a {
@@ -469,17 +473,18 @@ code {
 
   nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem;
     background: #c8d8e4;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    height: 100vh;
+    overflow-y: auto;
     z-index: 1000;
   }
 
